@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    color:#333;
+    margin: 0;
+    padding: 0;
+}
+.heading{
+    border-bottom: 2px solid #333;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 0;
+}
+.top{
+    font-size: 30px;
+}
+.one{
+    max-width: 295px;
+    width: 100%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap:5px;
+}
+
+.box{
+    height: 50px;
+    margin: 3px;
+    width: 50px;
+    font-size: 30px;
+    text-transform: uppercase;
+    border: 3px solid #ccc;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.correct{
+    background-color: darkgreen;
+    color: wheat;
+}
+.close{
+    background-color: goldenrod;
+    color: wheat;
+}
+.wrong{
+    background-color: #888;
+    color: wheat;
+}
+.invalid{
+    animation: flash 1s;
+}
+
+@keyframes flash{
+    5%{
+        border-color: crimson;
+    }
+    100%{
+        border-color: #ccc;
+    }
+}
+.loading{
+    font-size: 40px;
+    animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.hidden{
+    visibility: hidden;
+}
+.inf{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.winner{
+    animation: rainbow 1s linear infinite;
+}
+@keyframes rainbow{
+    20%{
+        color: red;
+    }
+    40%{
+        color:blue;
+    }
+    60%{
+        color:green;
+    }
+    80%{
+        color: orange;
+    }
+    100%{
+        color: yellow;
+    }
+}
